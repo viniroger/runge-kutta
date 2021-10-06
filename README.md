@@ -9,7 +9,8 @@ resolução de uma onda quadrada.
 O script EDP_AdvTime.f90 define a variável "scheme" com uma sigla que chama
 a função que discretiza a equação conforme a ordem do método de Runge-Kutta
 (RK2, RK4 ou RK6), que recebe o parâmetro indicando se deve ser centrado no
-espaço (CS), centrado no espaço 4ª ordem (CS4) ou UpwindSpace (FS).
+espaço de 2ª ordem (CS), centrado no espaço 4ª ordem (CS4) ou avançado no
+espaço de 1ª ordem 'UpwindSpace' (FS).
 
 Comandos utilizados (exceto renomear arquivos bin e ctl, alterando referência):  
 `$ gfortran EDP_AdvTime.f90;  

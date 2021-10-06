@@ -32,3 +32,10 @@ ga-> d uc.2`
 Observa-se que, ao aumentar a ordem de diferenciação, a precisão aumenta, já
 que a amplitude dos artefatos numéricos gerados pela discretização diminuem,
 aproximando o resultado da solução analítica.
+
+![alt text](RK4CS4_RK6CS4.png)  
+*Amplitude da onda quadrada com a solução analítica em branco, a solução de
+4ª ordem em verde e a solução de 6ª ordem em amarelo (RK4CS4 e RK6CS4)*
+
+Mesmo aumentando a ordem de diferenciação, não foi possível observar diferença
+significativa na solução de 6ª ordem em comparação com a de 4ª ordem.

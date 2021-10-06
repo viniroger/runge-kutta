@@ -428,8 +428,8 @@ CONTAINS
    REAL(KIND=r8):: Qnp1(SIZE(Q))
    IF(EDO=='CentredSpace')THEN
       k1 = CentredSpace(Q            , t          , dt,dx)
-      k2 = CentredSpace(Q+ 0.5*dt*k1 , t + 0.5*dt , dt,dx)
-      k3 = CentredSpace(Q+ 0.5*dt*k2 , t + 0.5*dt , dt,dx)
+      k2 = CentredSpace(Q+ 0.25*dt*k1 , t + 0.25*dt , dt,dx)
+      k3 = CentredSpace(Q+ 0.125*dt*k2 , t + 0.25*dt , dt,dx)
       k4 = CentredSpace(Q+ 0.5*dt*k3 , t + 0.5*dt , dt,dx)
       k5 = CentredSpace(Q+ 0.5*dt*k4 , t + 0.5*dt , dt,dx)
       k6 = CentredSpace(Q+     dt*k5 , t +     dt , dt,dx)
@@ -449,7 +449,7 @@ CONTAINS
        k6 = Solve_4thCS(Q+     dt*k5 , t +     dt , dt,dx)
    END IF
     Qnp1=0.0
-    Qnp1 = Q + 1./6.*dt*( k1 + 2.*k2 + 2.*k3 + k4 )
+    Qnp1 = Q + 1./90.*dt*( 7.*k1 + 32.*k3 + 12.*k4 + 32.*k5 + 7.*k6 )
 
  END FUNCTION RungeKutta6
 
@@ -575,7 +575,7 @@ PROGRAM  Main
   USE Class_WritetoGrads, Only : SchemeWriteCtl,SchemeWriteData,InitClass_WritetoGrads
    IMPLICIT NONE
    REAL               :: tend = 2000.!End time of simulation
-   CHARACTER(LEN=10) :: scheme      = 'RK2CS'  ! Advection scheme. Possible values:
+   CHARACTER(LEN=10) :: scheme      = 'RK6CS4'  ! Advection scheme. Possible values:
 
    INTEGER :: irec_err,unit2
 

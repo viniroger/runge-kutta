@@ -12,16 +12,16 @@ a função que discretiza a equação conforme a ordem do método de Runge-Kutta
 espaço (CS), centrado no espaço 4ª ordem (CS4) ou UpwindSpace (FS).
 
 Comandos utilizados (exceto renomear arquivos bin e ctl, alterando referência):  
-`$ gfortran EDP_AdvTime.f90  
-$ ./a.out  
-$ grads  
-ga-> open RK2CS.ctl  
-ga-> q file  
-ga-> open RK4CS4.ctl  
-ga-> q file  
-ga-> set t 50  
-ga-> d ua  
-ga-> d uc.1  
+`$ gfortran EDP_AdvTime.f90;  
+$ ./a.out;  
+$ grads;  
+ga-> open RK2CS.ctl;  
+ga-> q file;  
+ga-> open RK4CS4.ctl;  
+ga-> q file;  
+ga-> set t 50;  
+ga-> d ua;  
+ga-> d uc.1;  
 ga-> d uc.2`  
 
 ![alt text](RK2CS_RK4CS4.png)  

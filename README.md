@@ -24,9 +24,9 @@ ga-> d ua;
 ga-> d uc.1;  
 ga-> d uc.2`  
 
-![alt text](RK2CS_RK4CS4.png)  
+![alt text](RK2CS4_RK4CS4.png)  
 *Amplitude da onda quadrada com a solução analítica em branco, a solução de
-2a ordem em verde e a solução de 4a ordem em amarelo*
+2ª ordem em verde e a solução de 4ª ordem em amarelo (RK2CS4 e RK4CS4)*
 
 Observa-se que, ao aumentar a ordem de diferenciação, a precisão aumenta, já
 que a amplitude dos artefatos numéricos gerados pela discretização diminuem,

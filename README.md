@@ -37,5 +37,8 @@ aproximando o resultado da solução analítica.
 *Amplitude da onda quadrada com a solução analítica em branco, a solução de
 4ª ordem em verde e a solução de 6ª ordem em amarelo (RK4CS4 e RK6CS4)*
 
-Mesmo aumentando a ordem de diferenciação, não foi possível observar diferença
-significativa na solução de 6ª ordem em comparação com a de 4ª ordem.
+Mesmo aumentando a ordem de diferenciação, a diferença é bem pouco
+significativa na solução de 6ª ordem em comparação com a de 4ª ordem. Segue o
+gráfico da diferença entre as duas soluções:
+
+![alt text](diff_RK4CS4-RK6CS4.png)  
